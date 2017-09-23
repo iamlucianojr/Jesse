@@ -20,6 +20,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Auth::routes();
+Route::resource('posts', 'PostController');
 
-Route::get('/home', 'HomeController@index');
+Route::resource('customers', 'CustomerController');
+
+Route::resource('customers', 'CustomerController');
+
+Route::resource('orders', 'OrdersController');
