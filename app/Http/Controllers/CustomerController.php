@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Repositories\CustomerRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -57,7 +56,7 @@ class CustomerController extends AppBaseController
     {
         $input = $request->all();
 
-        $customer = $this->customerRepository->create($input);
+        $this->customerRepository->create($input);
 
         Flash::success('Customer saved successfully.');
 
@@ -107,7 +106,7 @@ class CustomerController extends AppBaseController
     /**
      * Update the specified Customer in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateCustomerRequest $request
      *
      * @return Response
@@ -122,7 +121,7 @@ class CustomerController extends AppBaseController
             return redirect(route('customers.index'));
         }
 
-        $customer = $this->customerRepository->update($request->all(), $id);
+        $this->customerRepository->update($request->all(), $id);
 
         Flash::success('Customer updated successfully.');
 
