@@ -11,10 +11,10 @@ class CreateUsers extends Seeder
      */
     public function run()
     {
-       $adminUser = new \App\User();
-       $adminUser->name = 'Admin user';
-       $adminUser->email = 'admin@jesse.com';
-       $adminUser->password = '123123';
-       $adminUser->save();
+        $adminUser = new \App\User();
+        $adminUser->name = 'Admin user';
+        $adminUser->email = 'admin@jesse.com';
+        $adminUser->password = bcrypt('123123');
+        $adminUser->save();
     }
 }

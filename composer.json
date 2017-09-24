@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "The Jesse project.",
+    "keywords": ["jesse", "city", "improve", "health"],
     "license": "MIT",
     "type": "project",
     "require": {
