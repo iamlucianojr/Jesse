@@ -1,30 +1,30 @@
 <!-- Id Field -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
-    <p>{!! $orders->id !!}</p>
+    <p>{!! $author->id !!}</p>
 </div>
 
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
-    <p>{!! $orders->name !!}</p>
+    <p>{!! $author->name !!}</p>
 </div>
 
-<!-- Foobar Field -->
+<!-- Description Field -->
 <div class="form-group">
-    {!! Form::label('foobar', 'Foobar:') !!}
-    <p>{!! $orders->foobar !!}</p>
+    {!! Form::label('description', 'Description:') !!}
+    <p>{!! $author->description !!}</p>
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $orders->created_at !!}</p>
+    <p>{!! $author->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $orders->updated_at !!}</p>
+    <p>{!! $author->updated_at !!}</p>
 </div>
 

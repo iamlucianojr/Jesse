@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Orders;
+use App\Models\Author;
 
-class CreateOrdersRequest extends FormRequest
+class CreateAuthorRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class CreateOrdersRequest extends FormRequest
      */
     public function rules()
     {
-        return Orders::$rules;
+        return Author::$rules;
     }
 }

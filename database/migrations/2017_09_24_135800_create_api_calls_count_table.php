@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration
+class CreateApiCallsCountTable extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -13,12 +13,11 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('api_calls_count', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('foobar');
+            $table->string('url');
+            $table->unsignedInteger('user_id')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('orders');
+        Schema::dropIfExists('api_calls_count');
     }
 }
