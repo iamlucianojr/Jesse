@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "resources/infyom/infyom-generator-templates/vuejs/js/package.json"
+      ]
+    }
+  }
+}
